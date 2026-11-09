@@ -93,8 +93,8 @@ h2{font-weight:600;font-size:clamp(30px,3.7vw,50px);line-height:1.04;letter-spac
 h2 em{display:block;font-style:normal}
 h3{font-weight:600;letter-spacing:-.015em}
 .lead{font-size:17.5px;color:var(--muted);max-width:44em;margin:0}
-.sec{padding:80px 0}
-.sec-head{margin:0 0 40px}
+.sec{padding:68px 0}
+.sec-head{margin:0 0 32px}
 
 /* ---------- hero ---------- */
 .hero{position:relative;padding:72px 0 44px}
@@ -509,6 +509,16 @@ h1 em{display:block;font-style:normal;padding-bottom:.06em}
 .posts-more span{font-size:14.5px;color:var(--faint)}
 @media (max-width:1100px){.posts{grid-template-columns:1fr 1fr}.nav{gap:20px}}
 @media (max-width:640px){.posts{grid-template-columns:1fr}.post{padding:22px}}
+.reasons.reasons-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:0;border-top:0}
+.reasons-grid li{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:20px 20px 18px;border:1px solid var(--stroke);border-radius:var(--r);background:var(--glass)}
+.reasons-grid li::before{flex:none;margin:0}
+.reasons-grid b{font-size:15.5px;line-height:1.35}
+.reasons-grid .linkbtn{margin-top:auto}
+@media (max-width:1100px){.reasons.reasons-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){.reasons.reasons-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.reasons.reasons-grid{grid-template-columns:1fr}}
+.more3.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:900px){.more3.two{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -519,7 +529,7 @@ h1 em{display:block;font-style:normal;padding-bottom:.06em}
     <a class="logo" href="#top"><svg viewBox="0 0 24 24" fill="none" stroke="#D6BD8A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.5 7l17 10M20.5 7l-17 10"/></svg><span><b>Лора Кучинская</b><span>архитектор конверсии</span></span></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Меню</button>
     <nav class="nav" id="nav" aria-label="Основная навигация">
-      <a href="#start">Услуги</a><a href="#cases">Кейсы</a><a href="#method">Метод</a><a href="#articles">Статьи</a><a href="#formats">Все форматы</a><a href="#faq">FAQ</a><a href="#about">Обо мне</a>
+      <a href="#start">Услуги</a><a href="#cases">Кейсы</a><a href="#method">Как работаю</a><a href="#formats">Все форматы</a><a href="#faq">FAQ</a><a href="#about">Обо мне</a><a href="#articles">Блог</a>
       <a class="btn btn-line" href="#contact">Прислать ссылку</a>
     </nav>
   </div>
@@ -574,38 +584,20 @@ h1 em{display:block;font-style:normal;padding-bottom:.06em}
   </div>
 </section>
 
-<section class="sec" id="problem" style="padding-top:56px">
+<section class="sec" id="problem" style="padding-top:48px;padding-bottom:0">
   <div class="wrap">
-    <div class="prob">
-      <div>
-        <p class="eyebrow">Проблема</p>
-        <h2>Есть трафик — <em class="soft">нет заявок</em></h2>
-        <p class="lead">Клиенты уходят на каждом шаге пути. Вот где это происходит чаще всего — и что я проверяю:</p>
-        <ul class="reasons">
+    <div class="sec-head" style="margin-bottom:24px">
+      <p class="eyebrow">Проблема</p>
+      <h2>Есть трафик — <em class="soft">нет заявок</em></h2>
+      <p class="lead">Клиенты уходят на каждом шаге пути. Вот где это происходит чаще всего — и что я проверяю:</p>
+    </div>
+    <ul class="reasons reasons-grid">
           <li><b>Оффер не читается за 3 секунды</b><button class="linkbtn" type="button" data-open="f-first-screen">Аудит первого экрана, от 7 000 ₽</button></li>
           <li><b>Суть закопана под перегрузом и штампами</b><button class="linkbtn" type="button" data-open="f-3">Аудит смыслов и текстов, от 10 000 ₽</button></li>
           <li><b>Нет доказательств — человек не верит</b><button class="linkbtn" type="button" data-open="f-full-audit">Полный аудит сайта, от 25 000 ₽</button></li>
           <li><b>Сложная форма и нет следующего шага</b><button class="linkbtn" type="button" data-open="f-7">Анти-аудит, от 10 000 ₽</button></li>
           <li class="sh"><b>В поиске — негатив или пустота</b><button class="linkbtn" type="button" data-open="f-reputation">Проверка репутации, от 8 000 ₽</button></li>
         </ul>
-      </div>
-      <div>
-        <aside class="card specimen" aria-label="Пример разбора строки с лендинга">
-          <p class="cap2">Как я читаю сайт: одна строка с типичного лендинга</p>
-          <p class="quote">Мы&nbsp;— <span class="mk mk-under">команда профессионалов</span> с&nbsp;<span class="mk mk-strike">индивидуальным подходом</span> к&nbsp;каждому клиенту.</p>
-          <ul class="notes">
-            <li><b>«команда профессионалов»</b> — кто именно и чем это доказано? Пустое заявление.</li>
-            <li><b>«индивидуальный подход»</b> — штамп с любого сайта. Клиент его не читает.</li>
-            <li><b>итог:</b> ни одного факта. Посетитель так и не понял, что вы продаёте и почему вам.</li>
-          </ul>
-          <div class="fix"><p class="t">Так стал звучать первый экран после аудита — кейс 01</p><p class="v">Дизайн-проект и ремонт квартиры в Минске по одному договору. Один подрядчик, один бюджет. Концепция — за 14 дней.</p></div>
-        </aside>
-        <blockquote class="manifest">
-          <p>Я не даю советы по цветам. Я прохожу путь самого скептичного клиента: закрываю ваш сайт и иду в поиск — искать подвох, как это делает он сам.</p>
-          <cite>— Лора</cite>
-        </blockquote>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1277,67 +1269,18 @@ h1 em{display:block;font-style:normal;padding-bottom:.06em}
 </section>
 -->
 
-<section class="sec" id="articles">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">Статьи</p>
-      <h2>Пишу о том, как сайты <em class="soft">теряют клиентов</em></h2>
-      <p class="lead">Короткие разборы без воды: одна проблема за раз, с понятными шагами, что проверить у себя. Так же я думаю и на аудите.</p>
-    </div>
-    <div class="posts">
-      <a class="card post" href="https://tenchat.ru/media/6282382-ya-kupila-by-no-ne-smogla-tri-sluchaya-iz-zhizni-obychnogo-pokupatelya" target="_blank" rel="noopener"><span class="pill">Путь клиента</span><h3>Я купила бы, но не смогла</h3><p>Три ситуации, после которых покупатель закрывает вкладку с полной корзиной: скрытая доставка, обязательная регистрация и исчезнувший промокод.</p><span class="go">Читать в TenChat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <a class="card post" href="https://tenchat.ru/media/6275855-poguglite-svoyu-kompaniyu-kak-pokupatel-a-ne-kak-vladelets" target="_blank" rel="noopener"><span class="pill">Репутация в поиске</span><h3>Погуглите свою компанию. Как покупатель, а не как владелец</h3><p>Пятиминутная проверка: что находят о вас клиенты, прежде чем написать или позвонить, и с чего начать уборку.</p><span class="go">Читать в TenChat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <a class="card post" href="https://tenchat.ru/media/6294285-voronka-bez-vody-gde-chelovek-otvalivayetsya-mezhdu-zashyol-i-kupil" target="_blank" rel="noopener"><span class="pill">Аналитика</span><h3>Воронка без воды: где человек отваливается между «зашёл» и «купил»</h3><p>Шесть шагов от схемы на листе бумаги до гипотезы: как найти самый слабый шаг и понять его причину.</p><span class="go">Читать в TenChat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-      <a class="card post" href="https://tenchat.ru/media/6285388-stranitsa-o-kompanii-odna-iz-samykh-skuchnykh-na-sayte" target="_blank" rel="noopener"><span class="pill">Тексты</span><h3>Страница «О компании»: одна из самых скучных на сайте</h3><p>Что на самом деле ищет человек на этой странице и как переписать её за пять шагов, чтобы ей поверили.</p><span class="go">Читать в TenChat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-    </div>
-    <div class="posts-more">
-      <a class="btn btn-line" href="https://tenchat.ru/Loranaia" target="_blank" rel="noopener">Все статьи в TenChat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <span>Блог в TenChat: @Loranaia</span>
-    </div>
-  </div>
-</section>
-
 <section class="sec" id="method">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Метод</p>
-      <h2>Теневой путь клиента <em class="soft">по шагам, с выводами</em></h2>
-      <p class="lead">Не общие советы, а разбор по шагам с конкретными выводами под внедрение.</p>
+      <p class="eyebrow">Как работаю</p>
+      <h2>От ссылки до плана правок <em class="soft">четыре шага</em></h2>
+      <p class="lead">Без общих советов: на выходе находки с приоритетами, которые можно сразу передать в работу.</p>
     </div>
-    <div class="seg" role="tablist" aria-label="Метод">
-      <button type="button" role="tab" id="t-look" aria-controls="p-look" aria-selected="true">Как я смотрю на сайт</button>
-      <button type="button" role="tab" id="t-work" aria-controls="p-work" aria-selected="false" tabindex="-1">Как мы работаем вместе</button>
-    </div>
-    <div class="steps" id="p-look" role="tabpanel" aria-labelledby="t-look">
-      <div class="card"><div class="sn"><b>01</b><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="19" r="2"/><circle cx="19" cy="5" r="2"/><path d="M7 19h6a3 3 0 0 0 0-6h-2a3 3 0 0 1 0-6h6"/></svg></div><h3>Прохожу путь клиента</h3><p>Смотрю на сайт глазами человека с рекламы: что он видит за 3 секунды и где начинает сомневаться.</p></div>
-      <div class="card"><div class="sn"><b>02</b><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg></div><h3>Деконструирую смысл</h3><p>Выписываю тезисы и обещания в одну цепочку и показываю, где она рвётся и где штамп вместо факта.</p></div>
-      <div class="card"><div class="sn"><b>03</b><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></svg></div><h3>Иду за клиентом в поиск</h3><p>Закрываю сайт и ищу вас, как он: отзывы, карты, форумы, конкуренты. Сверяю, где интернет спорит с сайтом.</p></div>
-      <div class="card"><div class="sn"><b>04</b><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg></div><h3>Собираю систему</h3><p>Структура, логика блоков и тексты по приоритетам: что править сразу, что позже, что стратегически.</p></div>
-    </div>
-    <div class="steps" id="p-work" role="tabpanel" aria-labelledby="t-work" hidden>
+    <div class="steps">
       <div class="card"><div class="sn"><b>01</b><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="12" height="17" rx="2"/><path d="M9 4V3h6v1M9 11h6M9 15h4"/></svg></div><h3>Бриф</h3><p>Присылаете ссылку, что продаёте, цель и, если есть, конкурентов. Чем точнее вводные, тем глубже результат.</p></div>
       <div class="card"><div class="sn"><b>02</b><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></svg></div><h3>Разбор</h3><p>Прохожу путь скептичного клиента: сайт, поиск, конкуренты, аналитика. Срок зависит от объёма.</p></div>
       <div class="card"><div class="sn"><b>03</b><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M3 20h18"/></svg></div><h3>Отчёт</h3><p>Карта проблем, приоритеты и конкретные правки. По желанию — разбор результатов по видеосвязи.</p></div>
       <div class="card"><div class="sn"><b>04</b><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></div><h3>Внедрение</h3><p>Передаю структуру, логику и тексты. Вёрстку и техническую часть делаете вы или ваши подрядчики.</p></div>
-    </div>
-    <div class="how">
-      <article class="card report" aria-label="Пример находки из отчёта">
-        <div class="rh"><b>Находка 4</b><span class="pill">Лендинг услуги</span><span class="pill p1">Приоритет 1</span></div>
-        <dl>
-          <dt>Что не так</dt><dd>Девять разных формулировок кнопки ведут в один и тот же попап.</dd>
-          <dt>Почему теряются заявки</dt><dd>Человек не понимает, какой шаг главный, и откладывает решение.</dd>
-          <dt>Было</dt><dd class="was">«Получить консультацию», «Давайте обсудим проект», «Заказать звонок», «Начать»…</dd>
-          <dt>Стало</dt><dd>Одна главная кнопка «Рассчитать стоимость» и одна второстепенная «Смотреть проекты».</dd>
-          <dt>Как проверить</dt><dd>Клики по главной кнопке и заявки с лендинга — две недели до и после.</dd>
-        </dl>
-        <p class="src">Так выглядит находка в отчёте. Пример из реального аудита, кейс 01.</p>
-      </article>
-      <div class="card princ">
-        <h3>Принципы</h3>
-        <div><b>Бритва Оккама</b><span>Меньше действий — больше продаж. Лишний шаг всегда стоит денег.</span></div>
-        <div><b>Закон Хика</b><span>Меньше выбора — быстрее решение.</span></div>
-        <div><b>Теневой путь клиента</b><span>Решение принимается и после того, как человек закрыл ваш сайт.</span></div>
-      </div>
     </div>
   </div>
 </section>
@@ -1585,11 +1528,9 @@ h1 em{display:block;font-style:normal;padding-bottom:.06em}
       <details><summary>С чего начать?<i aria-hidden="true"></i></summary><div class="ans">Пришлите ссылку на сайт, профиль или карточки — через форму внизу страницы или в Telegram. Посмотрю бесплатно и отвечу, какой формат подходит и есть ли смысл в аудите.</div></details>
       <details><summary>Сколько это стоит и от чего зависит?<i aria-hidden="true"></i></summary><div class="ans">Цена «от» — для базового объёма: до 10 страниц, карточек или конкурентов. Дальше она растёт вместе с объёмом и сложностью. Точную стоимость и состав работ называю до начала, после просмотра ссылки. Цены указаны в российских рублях.</div></details>
       <details><summary>Сколько времени занимает работа?<i aria-hidden="true"></i></summary><div class="ans">Зависит от объёма и сложности. Ориентир: экспресс-форматы — 1–3 рабочих дня, полный аудит — 3–7, стратегии и исследования — 1–3 недели. Точный срок называю вместе со стоимостью.</div></details>
-      <details><summary>Что я получу на выходе?<i aria-hidden="true"></i></summary><div class="ans">Отчёт с находками, приоритетами и конкретными правками: что не так, почему это стоит заявок, как было и как стало, как проверить результат. По желанию — разбор результатов по видеосвязи.</div></details>
       <details><summary>Вы вносите правки на сайте?<i aria-hidden="true"></i></summary><div class="ans">Нет. Я передаю структуру, логику блоков и тексты. Вёрстку и техническую реализацию делаете вы или ваши подрядчики.</div></details>
       <details><summary>Гарантируете рост заявок?<i aria-hidden="true"></i></summary><div class="ans">Нет, и никто честно не может. Результат зависит от внедрения, рекламы и сезона. Я даю диагностику и план, а не обещания.</div></details>
       <details><summary>Как вы работаете и как оформляется оплата?<i aria-hidden="true"></i></summary><div class="ans">Работаю удалённо с клиентами из России и Беларуси. Я самозанятая в РФ: работаю официально, выдаю чеки.</div></details>
-      <details><summary>А если аудит мне не нужен?<i aria-hidden="true"></i></summary><div class="ans">Так и скажу. Иногда достаточно исправить одну вещь, и платить за большой разбор не нужно.</div></details>
       </div>
     </div>
   </div>
@@ -1615,10 +1556,29 @@ h1 em{display:block;font-style:normal;padding-bottom:.06em}
       <div><b>География</b><span>Живу в Беларуси, работаю с клиентами из РФ и РБ.</span></div>
       <div><b>Специализация</b><span>Аудит сайтов, маркетплейсов и соцсетей, исследование рынка, позиционирование, стратегия, SERM/ORM.</span></div>
     </div>
-    <div class="more3">
+    <div class="more3 two">
       <div class="card"><h3>Инструменты</h3><ul class="tools"><li>Яндекс Метрика</li><li>Вебвизор</li><li>Google Analytics</li><li>WordPress</li><li>Битрикс24</li><li>Serpstat</li><li>Google Таблицы</li><li>MS Excel</li><li>Figma</li></ul></div>
       <div class="card"><h3>Образование</h3><ul class="edu"><li>Бренд-менеджмент<span>University of London / London Business School</span></li><li>Google Digital Marketing &amp; E-commerce Professional Certificate<span>Google</span></li><li>Meta Social Media Marketing Professional Certificate<span>Meta</span></li><li>Соцсети и маркетинг, управление проектами<span>Coursera / Meta</span></li></ul></div>
-      <div class="card"><h3>Портфолио</h3><p>UX, CRO и аналитика сайтов — в разделе <a href="#cases">«Кейсы»</a>.</p><p>Графический и веб-дизайн — <a href="https://www.behance.net/loradiz" target="_blank" rel="noopener">behance.net/loradiz</a></p><p>Статьи и разборы — <a href="#articles">в блоге</a> и в <a href="https://tenchat.ru/Loranaia" target="_blank" rel="noopener">TenChat</a>.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="articles">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Статьи</p>
+      <h2>Пишу о том, как сайты <em class="soft">теряют клиентов</em></h2>
+      <p class="lead">Короткие разборы без воды: одна проблема за раз, с понятными шагами, что проверить у себя. Так же я думаю и на аудите.</p>
+    </div>
+    <div class="posts">
+      <a class="card post" href="https://tenchat.ru/media/6282382-ya-kupila-by-no-ne-smogla-tri-sluchaya-iz-zhizni-obychnogo-pokupatelya" target="_blank" rel="noopener"><span class="pill">Путь клиента</span><h3>Я купила бы, но не смогла</h3><p>Три ситуации, после которых покупатель закрывает вкладку с полной корзиной: скрытая доставка, обязательная регистрация и исчезнувший промокод.</p><span class="go">Читать в TenChat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="card post" href="https://tenchat.ru/media/6275855-poguglite-svoyu-kompaniyu-kak-pokupatel-a-ne-kak-vladelets" target="_blank" rel="noopener"><span class="pill">Репутация в поиске</span><h3>Погуглите свою компанию. Как покупатель, а не как владелец</h3><p>Пятиминутная проверка: что находят о вас клиенты, прежде чем написать или позвонить, и с чего начать уборку.</p><span class="go">Читать в TenChat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="card post" href="https://tenchat.ru/media/6294285-voronka-bez-vody-gde-chelovek-otvalivayetsya-mezhdu-zashyol-i-kupil" target="_blank" rel="noopener"><span class="pill">Аналитика</span><h3>Воронка без воды: где человек отваливается между «зашёл» и «купил»</h3><p>Шесть шагов от схемы на листе бумаги до гипотезы: как найти самый слабый шаг и понять его причину.</p><span class="go">Читать в TenChat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="card post" href="https://tenchat.ru/media/6285388-stranitsa-o-kompanii-odna-iz-samykh-skuchnykh-na-sayte" target="_blank" rel="noopener"><span class="pill">Тексты</span><h3>Страница «О компании»: одна из самых скучных на сайте</h3><p>Что на самом деле ищет человек на этой странице и как переписать её за пять шагов, чтобы ей поверили.</p><span class="go">Читать в TenChat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+    <div class="posts-more">
+      <a class="btn btn-line" href="https://tenchat.ru/Loranaia" target="_blank" rel="noopener">Все статьи в TenChat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <span>Блог в TenChat: @Loranaia</span>
     </div>
   </div>
 </section>
