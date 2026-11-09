@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Лора Кучинская","jobTitle":"UX-аналитик, контент-архитектор, SERM/ORM-аналитик","description":"Аудит сайтов, карточек на маркетплейсах и репутации в поиске. Нахожу, где клиент перестаёт доверять и уходит, и даю план правок по приоритетам.","email":"vasilisiy.v@gmail.com","url":"https://loranaia.github.io/ConversionLab/","sameAs":["https://www.behance.net/loradiz","https://t.me/loranaia"],"knowsAbout":["UX-аудит","контент-аудит","SERM","ORM","аудит маркетплейсов","CJM","веб-аналитика"],"areaServed":["RU","BY"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Лора Кучинская","jobTitle":"UX-аналитик, контент-архитектор, SERM/ORM-аналитик","description":"Аудит сайтов, карточек на маркетплейсах и репутации в поиске. Нахожу, где клиент перестаёт доверять и уходит, и даю план правок по приоритетам.","email":"vasilisiy.v@gmail.com","url":"https://loranaia.github.io/ConversionLab/","sameAs":["https://www.behance.net/loradiz","https://t.me/loranaia","https://tenchat.ru/Loranaia"],"knowsAbout":["UX-аудит","контент-аудит","SERM","ORM","аудит маркетплейсов","CJM","веб-аналитика"],"areaServed":["RU","BY"]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "С чего начать?", "acceptedAnswer": {"@type": "Answer", "text": "Пришлите ссылку на сайт, профиль или карточки — через форму внизу страницы или в Telegram. Посмотрю бесплатно и отвечу, какой формат подходит и есть ли смысл в аудите."}}, {"@type": "Question", "name": "Сколько это стоит и от чего зависит?", "acceptedAnswer": {"@type": "Answer", "text": "Цена «от» — для базового объёма: до 10 страниц, карточек или конкурентов. Дальше она растёт вместе с объёмом и сложностью. Точную стоимость и состав работ называю до начала, после просмотра ссылки. Цены указаны в российских рублях."}}, {"@type": "Question", "name": "Сколько времени занимает работа?", "acceptedAnswer": {"@type": "Answer", "text": "Зависит от объёма и сложности. Ориентир: экспресс-форматы — 1–3 рабочих дня, полный аудит — 3–7, стратегии и исследования — 1–3 недели. Точный срок называю вместе со стоимостью."}}, {"@type": "Question", "name": "Что я получу на выходе?", "acceptedAnswer": {"@type": "Answer", "text": "Отчёт с находками, приоритетами и конкретными правками: что не так, почему это стоит заявок, как было и как стало, как проверить результат. По желанию — разбор результатов по видеосвязи."}}, {"@type": "Question", "name": "Вы вносите правки на сайте?", "acceptedAnswer": {"@type": "Answer", "text": "Нет. Я передаю структуру, логику блоков и тексты. Вёрстку и техническую реализацию делаете вы или ваши подрядчики."}}, {"@type": "Question", "name": "Гарантируете рост заявок?", "acceptedAnswer": {"@type": "Answer", "text": "Нет, и никто честно не может. Результат зависит от внедрения, рекламы и сезона. Я даю диагностику и план, а не обещания."}}, {"@type": "Question", "name": "Как вы работаете и как оформляется оплата?", "acceptedAnswer": {"@type": "Answer", "text": "Работаю удалённо с клиентами из России и Беларуси. Я самозанятая в РФ: работаю официально, выдаю чеки."}}, {"@type": "Question", "name": "А если аудит мне не нужен?", "acceptedAnswer": {"@type": "Answer", "text": "Так и скажу. Иногда достаточно исправить одну вещь, и платить за большой разбор не нужно."}}]}</script>
 <style>
 :root{
@@ -494,6 +494,21 @@ h1 em{display:block;font-style:normal;padding-bottom:.06em}
   .sticky .btn{flex:1;box-shadow:0 14px 40px -12px rgba(0,0,0,.8)}
   .sticky.off{transform:translateY(140%);opacity:0}
 }
+
+/* ---------- статьи из блога ---------- */
+.posts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.post{display:flex;flex-direction:column;padding:24px 24px 22px;text-decoration:none;color:inherit;transition:border-color .2s,background .2s,transform .2s}
+.post:hover{border-color:var(--gold-line);background:var(--gold-soft);transform:translateY(-2px)}
+.post .pill{align-self:flex-start;margin:0 0 18px;color:var(--gold-2);border-color:var(--gold-line)}
+.post h3{font-size:19px;line-height:1.25;margin:0 0 12px;color:var(--ink)}
+.post p{margin:0 0 20px;font-size:14.5px;line-height:1.55;color:var(--muted)}
+.post .go{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--gold)}
+.post .go svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+.post:hover .go svg{transform:translateX(4px)}
+.posts-more{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin:28px 0 0}
+.posts-more span{font-size:14.5px;color:var(--faint)}
+@media (max-width:1100px){.posts{grid-template-columns:1fr 1fr}.nav{gap:20px}}
+@media (max-width:640px){.posts{grid-template-columns:1fr}.post{padding:22px}}
 </style>
 </head>
 <body>
@@ -504,7 +519,7 @@ h1 em{display:block;font-style:normal;padding-bottom:.06em}
     <a class="logo" href="#top"><svg viewBox="0 0 24 24" fill="none" stroke="#D6BD8A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M3.5 7l17 10M20.5 7l-17 10"/></svg><span><b>Лора Кучинская</b><span>архитектор конверсии</span></span></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Меню</button>
     <nav class="nav" id="nav" aria-label="Основная навигация">
-      <a href="#start">Услуги</a><a href="#cases">Кейсы</a><a href="#method">Метод</a><a href="#formats">Все форматы</a><a href="#faq">FAQ</a><a href="#about">Обо мне</a>
+      <a href="#start">Услуги</a><a href="#cases">Кейсы</a><a href="#method">Метод</a><a href="#articles">Статьи</a><a href="#formats">Все форматы</a><a href="#faq">FAQ</a><a href="#about">Обо мне</a>
       <a class="btn btn-line" href="#contact">Прислать ссылку</a>
     </nav>
   </div>
@@ -1262,6 +1277,26 @@ h1 em{display:block;font-style:normal;padding-bottom:.06em}
 </section>
 -->
 
+<section class="sec" id="articles">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Статьи</p>
+      <h2>Пишу о том, как сайты <em class="soft">теряют клиентов</em></h2>
+      <p class="lead">Короткие разборы без воды: одна проблема за раз, с понятными шагами, что проверить у себя. Так же я думаю и на аудите.</p>
+    </div>
+    <div class="posts">
+      <a class="card post" href="https://tenchat.ru/media/6282382-ya-kupila-by-no-ne-smogla-tri-sluchaya-iz-zhizni-obychnogo-pokupatelya" target="_blank" rel="noopener"><span class="pill">Путь клиента</span><h3>Я купила бы, но не смогла</h3><p>Три ситуации, после которых покупатель закрывает вкладку с полной корзиной: скрытая доставка, обязательная регистрация и исчезнувший промокод.</p><span class="go">Читать в TenChat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="card post" href="https://tenchat.ru/media/6275855-poguglite-svoyu-kompaniyu-kak-pokupatel-a-ne-kak-vladelets" target="_blank" rel="noopener"><span class="pill">Репутация в поиске</span><h3>Погуглите свою компанию. Как покупатель, а не как владелец</h3><p>Пятиминутная проверка: что находят о вас клиенты, прежде чем написать или позвонить, и с чего начать уборку.</p><span class="go">Читать в TenChat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="card post" href="https://tenchat.ru/media/6294285-voronka-bez-vody-gde-chelovek-otvalivayetsya-mezhdu-zashyol-i-kupil" target="_blank" rel="noopener"><span class="pill">Аналитика</span><h3>Воронка без воды: где человек отваливается между «зашёл» и «купил»</h3><p>Шесть шагов от схемы на листе бумаги до гипотезы: как найти самый слабый шаг и понять его причину.</p><span class="go">Читать в TenChat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="card post" href="https://tenchat.ru/media/6285388-stranitsa-o-kompanii-odna-iz-samykh-skuchnykh-na-sayte" target="_blank" rel="noopener"><span class="pill">Тексты</span><h3>Страница «О компании»: одна из самых скучных на сайте</h3><p>Что на самом деле ищет человек на этой странице и как переписать её за пять шагов, чтобы ей поверили.</p><span class="go">Читать в TenChat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+    <div class="posts-more">
+      <a class="btn btn-line" href="https://tenchat.ru/Loranaia" target="_blank" rel="noopener">Все статьи в TenChat <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <span>Блог в TenChat: @Loranaia</span>
+    </div>
+  </div>
+</section>
+
 <section class="sec" id="method">
   <div class="wrap">
     <div class="sec-head">
@@ -1583,7 +1618,7 @@ h1 em{display:block;font-style:normal;padding-bottom:.06em}
     <div class="more3">
       <div class="card"><h3>Инструменты</h3><ul class="tools"><li>Яндекс Метрика</li><li>Вебвизор</li><li>Google Analytics</li><li>WordPress</li><li>Битрикс24</li><li>Serpstat</li><li>Google Таблицы</li><li>MS Excel</li><li>Figma</li></ul></div>
       <div class="card"><h3>Образование</h3><ul class="edu"><li>Бренд-менеджмент<span>University of London / London Business School</span></li><li>Google Digital Marketing &amp; E-commerce Professional Certificate<span>Google</span></li><li>Meta Social Media Marketing Professional Certificate<span>Meta</span></li><li>Соцсети и маркетинг, управление проектами<span>Coursera / Meta</span></li></ul></div>
-      <div class="card"><h3>Портфолио</h3><p>UX, CRO и аналитика сайтов — в разделе <a href="#cases">«Кейсы»</a>.</p><p>Графический и веб-дизайн — <a href="https://www.behance.net/loradiz" target="_blank" rel="noopener">behance.net/loradiz</a></p></div>
+      <div class="card"><h3>Портфолио</h3><p>UX, CRO и аналитика сайтов — в разделе <a href="#cases">«Кейсы»</a>.</p><p>Графический и веб-дизайн — <a href="https://www.behance.net/loradiz" target="_blank" rel="noopener">behance.net/loradiz</a></p><p>Статьи и разборы — <a href="#articles">в блоге</a> и в <a href="https://tenchat.ru/Loranaia" target="_blank" rel="noopener">TenChat</a>.</p></div>
     </div>
   </div>
 </section>
@@ -1610,7 +1645,7 @@ h1 em{display:block;font-style:normal;padding-bottom:.06em}
 <footer class="ftr">
   <div class="wrap">
     <span>© <span id="yr">2026</span> Лора Кучинская — UX-аналитик, контент-архитектор, SERM/ORM</span>
-    <nav aria-label="Контакты"><a href="https://t.me/loranaia" target="_blank" rel="noopener">Telegram</a><a href="mailto:vasilisiy.v@gmail.com?subject=%D0%90%D1%83%D0%B4%D0%B8%D1%82%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0" data-mail>Почта</a><a href="https://www.behance.net/loradiz" target="_blank" rel="noopener">Behance</a></nav>
+    <nav aria-label="Контакты"><a href="https://t.me/loranaia" target="_blank" rel="noopener">Telegram</a><a href="mailto:vasilisiy.v@gmail.com?subject=%D0%90%D1%83%D0%B4%D0%B8%D1%82%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0" data-mail>Почта</a><a href="https://tenchat.ru/Loranaia" target="_blank" rel="noopener">TenChat</a><a href="https://www.behance.net/loradiz" target="_blank" rel="noopener">Behance</a></nav>
   </div>
 </footer>
 
